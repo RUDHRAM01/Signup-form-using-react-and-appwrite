@@ -1,5 +1,6 @@
 import React from "react";
-import {account} from "../services/AppWriteConfig";
+import { account } from "../services/AppWriteConfig";
+import { Link } from "react-router-dom";
 const Signup = () => {
   const [userData, setUserData] = React.useState({
     userId: "",
@@ -93,6 +94,12 @@ const Signup = () => {
             }
             }
           />
+        </div>
+        <div className="mb-3">
+          <span>Already have an account ? </span>{" "}
+          <Link to="/login">
+            <button className="btn btn-primary">Login</button>
+          </Link>
         </div>
         <button type="submit" className="btn btn-success">
           Signup
